@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <title>오늘의 할 일</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="오늘의 할 일 홈">
+          <span class="brand-mark" aria-hidden="true">✓</span>
+          <span>하루 한 칸</span>
+        </a>
+        <span class="today-label" id="today-label"></span>
+      </header>
+      <section class="todo-card" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow">MY LITTLE PLAN</p>
+          <h1 id="page-title">오늘은 무엇을<br /><span>해볼까요?</span></h1>
+          <p class="subtitle">작은 한 걸음이 멋진 하루를 만들어요.</p>
+        </div>
+        <form class="task-form" id="task-form">
+          <label class="sr-only" for="task-input">새 할 일</label>
+          <input id="task-input" name="task" type="text" placeholder="새로운 할 일을 적어보세요" maxlength="120" autocomplete="off" required />
+          <button class="add-button" type="submit"><span aria-hidden="true">＋</span><span>추가</span></button>
+        </form>
+        <div class="list-heading">
+          <h2>오늘의 할 일 <span class="count" id="task-count">0</span></h2>
+          <p id="progress-text">천천히 하나씩 해봐요</p>
+        </div>
+        <ul class="task-list" id="task-list" aria-live="polite"></ul>
+        <div class="empty-state" id="empty-state">
+          <span class="empty-icon" aria-hidden="true">✦</span>
+          <p>아직 할 일이 없어요.<br />첫 번째 할 일을 추가해 보세요!</p>
+        </div>
+        <footer class="card-footer">
+          <span><i class="status-dot" id="storage-dot" aria-hidden="true"></i> <span id="storage-note">이 기기에 자동 저장돼요</span></span>
+          <button class="clear-button" id="clear-completed" type="button" hidden>완료한 일 지우기</button>
+        </footer>
+      </section>
+      <p class="closing-note">완벽하지 않아도 괜찮아요. 시작한 것만으로 충분해요 🌱</p>
+    </main>
+  </body>
+</html>
